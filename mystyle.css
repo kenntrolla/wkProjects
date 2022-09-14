@@ -1,0 +1,131 @@
+/* Import Lexend Exa Font */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&family=Poppins:ital@1&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+/* Styling Body */
+body{
+	font-family: 'Poppins', sans-serif;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+
+header{
+	display: flex;
+	background-color: #B38E83;
+	justify-content: space-around;
+	padding: 1rem 0;
+	align-items: center;
+}
+.my_logo{
+	display: flex;
+	align-items: center;
+}
+.my_logo img{
+width: 50px;
+border-radius: 50%;
+margin-right: 10px;
+}
+
+
+.header_logo{
+	color: #096267;
+	font-weight: 600;
+}
+
+.nav_list{
+	display: flex;
+	align-items: center;
+
+}
+
+.nav_item{
+	margin: 0 8px;
+
+}
+.nav_link{
+	padding: 10px;
+	color: #eeeeee;
+	font-size: 0.9rem;
+	font-weight: 500;
+	border-radius: 5px;
+}
+.nav_link:hover{
+	background-color: red;
+}
+.header_toggle,
+.header_close
+{
+	display: none;
+}
+
+
+@media screen and (max-width:  768px){
+	header{
+		height: 48px;
+		justify-content: space-between;
+		padding: 0 28px;
+	}
+	.my_logo a{
+		font-size: 0.9rem;
+	}
+
+	.my_logo img{
+		width: 30px;
+
+	}
+	.header_toggle{
+		display: inline;
+		color: black;
+		font-size: 24px;
+
+	}
+
+	.header_close{
+		position: absolute;
+		right: 24px;
+		display: block;
+		font-size: 24px;
+		border-radius: 50%;
+
+	}
+
+	.header_close:hover {
+		background-color: darkblue;
+
+
+	}
+	.nav{
+		position: fixed;
+		top: 0;
+		right: -100%;
+		background-color: lightcyan;
+		color: skyblue;
+		width: 60%;
+		height: 100vh;
+		padding: 24px 0;
+		z-index: 100;
+		transition: 0.5;
+		border-radius: 0 0 0 50px;
+	}
+	.nav_list{
+
+		display: flex;
+		flex-direction: column;
+	}
+	.nav_item{
+		margin: 2rem 0;
+	}
+	.show{
+		right: 0;
+	}
+}
